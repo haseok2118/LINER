@@ -1,21 +1,22 @@
 import styled from '@emotion/styled';
 
 export const HeaderContainer = styled.div`
-position: fixed;
-width: 100%;
-height:64px;
-background-color: #FFFFFF;
-display: flex;
-justify-content: center;
-align-items: center;
+  position: fixed;
+  width: 1280px;
+  height:64px;
+  background-color: #FFFFFF;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const HeaderWrapper = styled.div`
-  width: 1280px;
+  width: 100%;
   height: 64px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  border: none;
   padding-top: 10px;
   padding-bottom: 10px;
 

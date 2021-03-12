@@ -1,14 +1,17 @@
-import React from 'react'
+import React from 'react';
 import './App.css';
-import Header from './components/HeaderSection'
-import ModalSection from './components/atoms/ModalSection'
+import {MainContainer} from './AppElement'
+import Header from './components/HeaderSection';
+import ModalSection from './components/atoms/ModalSection';
+import LeftSidebarSection from './components/LeftSidebarSection'
 
  const App = () => {
-  return (
-    // <div>
-    //   <Header />
-    // </div>
-    <ModalSection />
+   return (
+     <MainContainer>
+       <Header />
+       <LeftSidebarSection />
+    </MainContainer>
+    // <ModalSection />
   )
 }
 
