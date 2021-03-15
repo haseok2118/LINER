@@ -29,6 +29,7 @@ border: none;
 border-radius: 12px;
 padding: 16px 16px;
 float: right;
+margin-bottom: 16px;
 `;
 
 const KeyWordsTitle = styled.div`

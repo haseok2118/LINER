@@ -3,25 +3,22 @@ import AddLinerSection from '../atoms/AddLinerSection';
 import {
   RightSidebarContainer,
 } from './RightSidebarElements';
-import KeyWordsSection from '../atoms/KeyWordsSection'
+import KeyWordsSection from '../atoms/KeyWordsSection';
+import RecommandPages from '../atoms/RecommandPagesSection'
+import SidebarFooter from '../atoms/SidebarFooterSection'
+
 
 export const RightSidebarSection = () => {
 
   return (
   <>
     <RightSidebarContainer>
-        <AddLinerSection />
-        <KeyWordsSection />
-      {/* 
-      <RecommandPages>
-        <div>
-          Trending Pages
-        </div>
-        <SpreadPageContents />
-      </RecommandPages> */}
-      
+      <AddLinerSection />
+      <KeyWordsSection />
+      <RecommandPages />
+      <SidebarFooter />
     </RightSidebarContainer>
-    {/* <Footer /> */}
+    
   </>
   )
 }
