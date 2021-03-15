@@ -8,7 +8,6 @@ flex-direction: column;
 min-height: 200px;
 top: 98px;
 justify-content: center;
-
 `;
 
 export const Tab = styled.a`
@@ -17,7 +16,8 @@ height: 51px;
 display: flex;
 align-items: center;
 font-size: 16px;
-font-weight: 400;
+font-weight: "normal";
+padding: 5px;
 color: #81868F;
 border-radius: 8px;
 letter-spacing: 1px;

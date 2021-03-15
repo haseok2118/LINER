@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 
 export const HeaderContainer = styled.div`
-  position: fixed;
+position: sticky;
+top:0;
   width: 1280px;
   height:64px;
   background-color: #FFFFFF;

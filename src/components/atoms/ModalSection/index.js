@@ -8,7 +8,7 @@ import {
   ModalFooter,
 } from './ModalElement'
 
-const ModalSection = () => {
+const ModalSection = ({handleCloseModal}) => {
 
   return (
     <ModalContainer>
@@ -16,23 +16,24 @@ const ModalSection = () => {
         <ModalHeaderWrapper>
           <ModalHeader>
             <div>Share Original Page</div>
-            <span>
-              <img src="" alt="" ></img>
+            <span onClick={handleCloseModal}>
+              <img src="close-light.svg" alt="" ></img>
             </span>
           </ModalHeader>
         </ModalHeaderWrapper>
         <ModalContent>
           <div>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
+            <a href="#"><img src="facebook.svg" alt="" /></a>
+            <a href="#"><img src="twitter.svg" alt="" /></a>
+            <a href="#"><img src="linkdin.svg" alt="" /></a>
+            <a href="#"><img src="messenger.svg" alt="" /></a>
+            <a href="#"><img src="line.svg" alt="" /></a>
+            <a href="#"><img src="mail.svg" alt="" /></a>
           </div>
-          
         </ModalContent>
         <ModalFooter>
-          <div></div>
-          <button></button>
+          <div>https://www.getliner.com/foryou/posts/7GdseythMSDG65485asgcb659SDGB</div>
+          <button>Copy</button>
         </ModalFooter>
       </ModalBox>
     </ModalContainer>

@@ -6,6 +6,12 @@
     sans-serif;
 }
 
-body {
-  display: bloxk;
+/* #root {
+  position: relative;
+  height: 100vh;
+} */
+.MainContainer {
+  width: 1280px;
+  margin: 0px auto;
+  height: 100vh;
 }
