@@ -10,6 +10,7 @@ top:0;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index:1;
 `;
 
 export const HeaderWrapper = styled.div`

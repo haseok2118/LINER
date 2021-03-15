@@ -1,16 +1,16 @@
 import styled from '@emotion/styled';
 
 export const ForYouSectionContainer = styled.div`
-width: 100%;
+width: 1064px;
 height: 100%;
 margin-top: 34px;
 margin-left: 216px;
-padding:0 30px;
+padding-left:30px;
+display:flex;
 `;
 export const ForYouSectionWrapper = styled.div`
 width: 680px;
 height: 100%;
-
 `;
 
 export const ForYouSectionHeader = styled.div`

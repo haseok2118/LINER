@@ -9,7 +9,8 @@ import {
   ArrowForClosingFilter,
   ArrowForOpeningFilter
 } from './ForYouElements';
-import ForYouContent from './ForYouContent'
+import ForYouContent from './ForYouContent';
+import RightSidebarSection from '../RightSidebarSection'
 
 export const ForYouSection = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -69,6 +70,7 @@ export const ForYouSection = () => {
           saveClick={saveClick}
         />
       </ForYouSectionWrapper>
+      <RightSidebarSection />
     </ForYouSectionContainer>
   )
 }
