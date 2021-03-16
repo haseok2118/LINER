@@ -5,12 +5,10 @@ import {
   ForYouSectionHeader,
   ForYouSectionSubHeader,
   ForYouHeaderTitle,
-  ForYouHeaderDropdown,
-  ArrowForClosingFilter,
-  ArrowForOpeningFilter
 } from './ForYouElements';
 import ForYouContent from './ForYouContent';
-import RightSidebarSection from '../RightSidebarSection'
+import RightSidebarSection from '../RightSidebarSection';
+import LanguagesDropdown from '../atoms/DropdownSection/LanguagesDropdown';
 
 export const ForYouSection = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -54,11 +52,7 @@ export const ForYouSection = () => {
               <img src="info.svg" alt="" />
             </div>
           </ForYouHeaderTitle>
-          <ForYouHeaderDropdown>
-            Languages
-            <ArrowForClosingFilter src="collapse.svg" alt="" />
-            <ArrowForOpeningFilter src="expand-grey.svg" alt="" />
-          </ForYouHeaderDropdown>
+          <LanguagesDropdown />
         </ForYouSectionHeader>
         <ForYouSectionSubHeader>
           Picked by LINER, just for you

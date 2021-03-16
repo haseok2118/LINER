@@ -41,26 +41,7 @@ div {
   }
 }
 `;
-export const ForYouHeaderDropdown = styled.div`
-display: flex;
-align-items: center;
-color: #787d86;
-`;
-
 export const ForYouSectionSubHeader = styled.div`
 margin: 20px 0;
 color: #787d86;
-`;
-
-export const ArrowForClosingFilter = styled.img`
-display: none;
-margin: 0;
-width: 16px;
-height: 16px;
-`;
-export const ArrowForOpeningFilter = styled.img`
-display: block;
-margin: 0;
-width: 16px;
-height: 16px;
 `;

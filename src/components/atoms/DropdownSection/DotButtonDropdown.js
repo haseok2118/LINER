@@ -70,7 +70,6 @@ border-radius: 50%;
     border-radius: 3px;
   }
 }
-
 `;
 
  const ButtonDropdownContentWrapper = styled.div`
@@ -81,13 +80,13 @@ border: 1px solid #DDE1E6;
 border-radius: 3px;
 background-color: #fff;
 z-index: 999;
-box-shadow: 0 10px 20px 0 rgb(39 43 49 / 10%)
+box-shadow: 0 10px 20px 0 rgb(39 43 49 / 10%);
 `;
  const ButtonDropdownContent = styled.div`
 width: 100%;
 height: 40px;
 font-size: 15px;
-paddong: 8px 15px;
+padding: 8px 8px;
 display: flex;
 align-items: center;
 border-radius: 5px;
