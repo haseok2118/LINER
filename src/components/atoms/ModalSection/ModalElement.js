@@ -11,7 +11,7 @@ background-color: rgba(0,0,0,0.4);
 display: flex;
 justify-content: center;
 align-items: center;
-z-index: 1;
+z-index: 999;
 overflow: hidden;
 `;
 
