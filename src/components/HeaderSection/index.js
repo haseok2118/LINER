@@ -31,7 +31,7 @@ const HeaderSection = () => {
           <AlertButton >
           </AlertButton>
           <UploadButton onClick={handleModalStatus}>
-              <img src="add-highlights.svg" alt="" />
+              <img src="./images/add-highlights.svg" alt="" />
             PDF
           </UploadButton>
         </RightButtonContainer>

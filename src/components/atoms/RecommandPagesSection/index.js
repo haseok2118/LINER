@@ -33,7 +33,7 @@ export const RecommandPages = () => {
           ))
         }
       </RecommandPagesContentWrapper>
-      <ShowMoreButton>Show More <img src="expand.svg" alt="" /></ShowMoreButton>
+      <ShowMoreButton>Show More <img src="./images/expand.svg" alt="" /></ShowMoreButton>
     </RecommandPagesContainer>
   )
 }

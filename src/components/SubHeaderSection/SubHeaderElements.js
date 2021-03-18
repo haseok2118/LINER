@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const SubHeaderContainer = styled.div`
-height: 30px;
+height: 40px;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -9,13 +9,11 @@ margin-top: 40px;
 color: #787d86;
 `;
 export const SubHeaderTab = styled.div`
-height: 100%;
 display: flex;
 align-items: center;
 a {
-  height: 100%;
   border-radius: 8px;
-  padding:10px 15px;
+  padding:15px 15px;
   :hover {
     background-color: #EDF1F4;
     cursor: pointer;
@@ -36,9 +34,12 @@ font-size: 15px;
 color: #787d86;
 border: none;
 background-color: #fff;
+background-image: url("/images/search-header.svg");
+background-size: cover;
 width: 30px;
 height: 30px;
 border-radius: 50%;
+outline: none;
 :hover {
   background-color: #EEF1F4;
   cursor: pointer;
@@ -53,9 +54,6 @@ border-radius: 50%;
     letter-spacing: 0.8px;
     border-radius: 2px;
   }
-:focus {
-  outline: none;
-}
 `;
 
 export const SearchHighlightsBox = styled.div`

@@ -8,27 +8,19 @@ const DotButtonDropdown = () => {
   }
   return (
     <ButtonDropdownContainer>
-      <ButtonDropdownButton  onClick={handleClick}>
-        <img src="more-light.svg" alt="" />
-      </ButtonDropdownButton>
+      <ButtonDropdownButton  onClick={handleClick} />
       {dropDown &&
       <ButtonDropdownContentWrapper>
         <ButtonDropdownContent>
-          <span>
-            <img src="like-dropdown.svg" alt=""/>
-          </span>
+          <span><img src="./images/like-dropdown.svg" alt=""/></span>
           More pages like this
         </ButtonDropdownContent>
         <ButtonDropdownContent>
-          <span>
-            <img src="dislike-dropdown.svg" alt=""/>
-          </span>
+          <span><img src="./images/dislike-dropdown.svg" alt=""/></span>
           Fewer pages like this
         </ButtonDropdownContent>
         <ButtonDropdownContent>
-          <span>
-            <img src="hide-dropdown.svg" alt=""/>
-          </span>
+          <span><img src="./images/hide-dropdown.svg" alt=""/></span>
           Hide this page
         </ButtonDropdownContent>
       </ButtonDropdownContentWrapper>
@@ -54,6 +46,8 @@ justify-content: center;
 width: 30px;
 height: 30px;
 border-radius: 50%;
+background-image: url("/images/more-light.svg");
+background-size: cover;
 :hover {
   background-color: #EEF1F4;
   cursor: pointer;

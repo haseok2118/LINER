@@ -1,33 +1,59 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import ModalSection from '../atoms/ModalSection'
-import DotButtonDropdown from '../atoms/DropdownSection/DotButtonDropdown';
+import ShareDropdown from '../atoms/DropdownSection/ShareDropdown';
+import DotShareDropdown from '../atoms/DropdownSection/DotShareDropdown';
 
 const MyHighlightsContents = ({
-  modalOpen,
-  handleOpenShareModal
+  shareDropdown,
+  shareDotDropdown,
+  shareFullText,
+  shareSummary,
+  send,
+  trash,
+  editFile,
+  handleShareDropdown,
+  handleShareDotDropdown,
+  handleShareFullTextModal,
+  handleShareSummaryModal,
+  handleSendModal,
+  handleEditFileModal,
+  handleTrashModal,
 }) => {
 
   return (
     <MyHighlightsContentsContainer>
       <MyHighlightsContentsWrapper>
         <MyHighlightsContentsBox>
-          <h2>love love love</h2>
-          <p>19. Reward yourself after completing challenges, even badly</p>
+          <h2>the truth</h2>
+          <p>there is nothing</p>
         </MyHighlightsContentsBox>
         <MyHighlightsContentsImage src="" alt=""/>
       </MyHighlightsContentsWrapper>
       <MyHighlightsContentsBottomNavbar>
         <MyHighlightsContentsSourceContainer>
           <img src="" alt="" width="20px" height="20px" />
-          <div>www.nanana.com</div>
+          <div>www.has.com</div>
         </MyHighlightsContentsSourceContainer>
         <MyHighlightsContentsBoxContainer>
-          <ShareModal onClick={handleOpenShareModal}>
-            <img src="share-header.svg" alt="" />
-          </ShareModal>
-          {modalOpen && <ModalSection handleCloseModal={handleOpenShareModal} />}
-          <DotButtonDropdown />
+          <ShareDropdown
+            shareDropdown={shareDropdown}
+            shareFullText = {shareFullText}
+            shareSummary={shareSummary}
+            handleShareDropdown={handleShareDropdown}
+            handleShareFullTextModal = { handleShareFullTextModal }
+            handleShareSummaryModal = {handleShareSummaryModal}
+            />
+          <DotShareDropdown
+            shareDotDropdown={shareDotDropdown}
+            send={send}
+            trash={trash}
+            editFile={editFile}
+            handleShareDotDropdown={handleShareDotDropdown}
+            handleSendModal={handleSendModal}
+            handleEditFileModal={handleEditFileModal}
+            handleTrashModal={handleTrashModal}
+          />
+          
         </MyHighlightsContentsBoxContainer>
       </MyHighlightsContentsBottomNavbar>
     </MyHighlightsContentsContainer>
@@ -86,28 +112,4 @@ display:flex;
 width: 96px;
 align-items: center;
 justify-content: space-evenly;
-`;
-const ShareModal = styled.div`
-position:relative;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 50%;
-width: 30px;
-height: 30px;
-:hover {
-  background-color: #EEF1F4;
-  cursor: pointer;
-  ::after {
-    position: absolute;
-    content:"Share";
-    padding: 1px;
-    font-size: 12px;
-    background-color: #323235;
-    color: #fff;
-    top: 30px;
-    left: 0;
-    letter-spacing: 0.8px;
-    border-radius: 3px;
-  }
 `;

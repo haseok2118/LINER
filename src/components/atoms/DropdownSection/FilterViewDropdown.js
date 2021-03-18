@@ -68,8 +68,8 @@ const FilterViewDropdown = () => {
     <FilterViewDropdownContainer>
       <FilterViewDropdownButton onClick = {handleOpenFilterView}>
         {filterName}
-        <ArrowForClosingFilter id="arrow-close" src="collapse.svg" alt="" />
-        <ArrowForOpeningFilter id="arrow-open" src="expand-grey.svg" alt="" />
+        <ArrowForClosingFilter id="arrow-close" src="./images/collapse.svg" alt="" />
+        <ArrowForOpeningFilter id="arrow-open" src="./images/expand-grey.svg" alt="" />
       </FilterViewDropdownButton>
       {filterViewOpen &&
         <FilterViewDropdownContentWrapper>
@@ -80,7 +80,7 @@ const FilterViewDropdown = () => {
             return (
             <FilterViewDropdownContent key={item.id} id={item.story} onClick={handleCheckedFilterView}>
             {item.story}
-            <span><img src="check-primary.svg" alt="" /></span>
+            <span><img src="./images/check-primary.svg" alt="" /></span>
               </FilterViewDropdownContent>
             )
           }
@@ -105,17 +105,15 @@ height: 100%;
 display: flex;
 justify-content: flex-end;
 align-items: center;
-font-size: 15px;
+font-size: 16px;
 color: #787d86;
 border: none;
 background-color: #fff;
 cursor: pointer;
+outline: none;
 :hover {
   color: black;
   opacity: 0.7;
-:focus {
-  outline: none;
-}
 `;
 
 const FilterViewDropdownContentWrapper = styled.ul`

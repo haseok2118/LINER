@@ -9,14 +9,25 @@ import {
   SearchHighlightsBar,
   SearchCancelButton,
 } from './SubHeaderElements';
-import FilterViewDropdown from '../DropdownSection/FilterViewDropdown';
-import FilterTagDropdown from '../DropdownSection/FilterTagDropdown';
-import SearchOptionsDropdown from '../DropdownSection/SearchOptionsDropdown'
+import FilterViewDropdown from '../atoms/DropdownSection/FilterViewDropdown';
+import FilterTagDropdown from '../atoms/DropdownSection/FilterTagDropdown';
+import SearchOptionsDropdown from '../atoms/DropdownSection/SearchOptionsDropdown'
 export const SubHeader = () => {
 
   const [searchBar, setSearchBar] = useState(false);
   const handleSearchBarOpen = () => {
     setSearchBar(!searchBar)
+  };
+  const handleTabClick = (e) => {
+    let targetClass = e.target.className;
+    let tabArray = document.getElementsByClassName(`${targetClass}`);
+    let tabName = e.target.id;
+    
+    for (let x = 0; x < tabArray.length; x += 1) {
+      tabArray[x].style.color = "#81868F";
+    };
+    
+    document.getElementById(tabName).style.color = "black";
   };
   return (
     <>
@@ -24,20 +35,17 @@ export const SubHeader = () => {
         !searchBar &&
         <SubHeaderContainer>
           <SubHeaderTab>
-            <a>Highlights</a>
-            <a>Tags</a>
+            <a className="sub-header-tab" id="sub-highlight" onClick={handleTabClick}>Highlights</a>
+            <a className="sub-header-tab" id="sub-tags" onClick={handleTabClick}>Tags</a>
           </SubHeaderTab>
           <SubHeaderButtons>
             <FilterViewDropdown />
             <FilterTagDropdown />
-            <SearchHighlightsButton onClick={handleSearchBarOpen}>
-              <img src="search-header.svg" alt="" />
-            </SearchHighlightsButton>
+            <SearchHighlightsButton onClick={handleSearchBarOpen} />
           </SubHeaderButtons>
         </SubHeaderContainer>
       }
-      {
-        searchBar &&
+      {searchBar &&
       <>
         <SearchHighlightsBox>
           <FilterViewDropdown />
@@ -53,6 +61,6 @@ export const SubHeader = () => {
       }
     </>
   )
-
 }
+
 export default SubHeader;

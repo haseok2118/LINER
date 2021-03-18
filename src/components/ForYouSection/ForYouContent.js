@@ -6,6 +6,7 @@ import SaveButton from '../atoms/ButtonSection/SaveButton';
 import SaveFilledButton from '../atoms/ButtonSection/SaveFilledButton';
 
 const ForYouContent = ({
+  Data,
   modalOpen,
   saveClick,
   handleClickSaveButton,
@@ -16,15 +17,15 @@ const ForYouContent = ({
     <ForYouContentContainer>
       <ForYouContentWrapper>
         <ForYouContentBox>
-          <h2>love love love</h2>
-          <p>19. Reward yourself after completing challenges, even badly</p>
+          <h2>{ Data.forYouData.title }</h2>
+          <p>{ Data.forYouData.story }</p>
         </ForYouContentBox>
         <ForYouContentImage src="" alt=""/>
       </ForYouContentWrapper>
       <ForYouContentBottomNavbar>
         <ForYouContentSourceContainer>
           <img src="" alt="" width="20px" height="20px" />
-          <div>www.nanana.com</div>
+          <div>{ Data.forYouData.address }</div>
         </ForYouContentSourceContainer>
         <ForYouContentBoxContainer>
           {saveClick &&
@@ -35,7 +36,7 @@ const ForYouContent = ({
           }
           {!saveClick && < SaveButton handleClickSaveButton={handleClickSaveButton}/>}
           <ShareModal onClick={handleOpenShareModal}>
-            <img src="share-header.svg" alt="" />
+            <img src="./images/share-header.svg" alt="" />
           </ShareModal>
           {modalOpen && <ModalSection handleCloseModal={handleOpenShareModal} />}
           <DotButtonDropdown />

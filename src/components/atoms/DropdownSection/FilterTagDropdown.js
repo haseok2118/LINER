@@ -14,9 +14,7 @@ const FilterTagDropdown = () => {
 
   return (
     <FilterTagDropdownContainer>
-      <FilterTagDropdownButton onClick={handleOpenFilterTag}>
-        <img src="filter-header.svg" alt="" />
-      </FilterTagDropdownButton>
+      <FilterTagDropdownButton onClick={handleOpenFilterTag} />
       {filterTagOpen &&
         <FilterTagDropdownContentWrapper>
           <div>
@@ -55,7 +53,6 @@ const FilterTagDropdown = () => {
             No Tags
           </FilterSearchingTag>
         }
-          
         </FilterTagDropdownContentWrapper>
       }
       {!filterTagOpen && <></>}
@@ -68,6 +65,7 @@ export default FilterTagDropdown;
 const FilterTagDropdownContainer = styled.div`
 display: inline-block;
 margin-right: 10px;
+
 `;
 const FilterTagDropdownButton = styled.button`
 position:relative;
@@ -78,9 +76,12 @@ font-size: 15px;
 color: #787d86;
 border: none;
 background-color: #fff;
+background-image: url("/images/filter-header.svg");
+background-size: cover;
 width: 30px;
 height: 30px;
 border-radius: 50%;
+outline: none;
 :hover {
   background-color: #EEF1F4;
   cursor: pointer;
@@ -95,9 +96,6 @@ border-radius: 50%;
     letter-spacing: 0.8px;
     border-radius: 2px;
   }
-:focus {
-  outline: none;
-}
 `;
 
 const FilterTagDropdownContentWrapper = styled.ul`

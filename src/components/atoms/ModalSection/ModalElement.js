@@ -17,7 +17,7 @@ overflow: hidden;
 
 export const ModalBox = styled.div`
 width: 480px;
-min-height: 200px;
+min-height: 250px;
 background-color: #fff;
 display: flex;
 flex-direction: column;
@@ -57,6 +57,12 @@ span {
   }
 }
 `;
+export const ModalSubHeader = styled.div`
+padding: 0 5px;
+margin-top: 5px;
+color: #787d86;
+`;
+
 export const ModalContent = styled.div`
 width: 100%;
 flex-grow: 2;
@@ -111,6 +117,5 @@ button {
   :hover {
     background-color: #b5f5f2cc;
   }
-
 }
 `;

@@ -14,7 +14,7 @@ const AddLinerSection = () => {
           <div>Add LINER</div>
           <p>Add LINER to your browser and start highlighting.</p>
         </div>
-        <img className="add-liner-image" src="add-liner.svg" alt="" width="48px" height="48px"/>
+        <img className="add-liner-image" src="./images/add-liner.svg" alt="" width="48px" height="48px"/>
       </AddLinerContent>
       <AddLinerButton>Add to Browser</AddLinerButton>
   </AddLinerContainer>

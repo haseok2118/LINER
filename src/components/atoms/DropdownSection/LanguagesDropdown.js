@@ -41,8 +41,8 @@ const LanguagesDropdown = () => {
     <LanguagesDropdownContainer>
       <LanguagesDropdownButton onClick = {handleOpenLanguages}>
         Languages
-        <ArrowForClosingFilter id="arrow-close" src="collapse.svg" alt="" />
-        <ArrowForOpeningFilter id="arrow-open" src="expand-grey.svg" alt="" />
+        <ArrowForClosingFilter id="arrow-close" src="./images/collapse.svg" alt="" />
+        <ArrowForOpeningFilter id="arrow-open" src="./images/expand-grey.svg" alt="" />
       </LanguagesDropdownButton>
       {languageOpen &&
         <LanguagesDropdownContentWrapper>
@@ -51,7 +51,7 @@ const LanguagesDropdown = () => {
           languageData.map( (item) => 
             (<LanguagesDropdownContent key={item.id} id={item.story} onClick={handleCheckedLanguage}>
               {item.story}
-              <span><img src="check-primary.svg" alt="" /></span>
+              <span><img src="./images/check-primary.svg" alt="" /></span>
             </LanguagesDropdownContent>
             )
           )
@@ -74,14 +74,12 @@ width: 100%;
 position:relative;
 justify-content: flex-end;
 display: flex;
-font-size: 14px;
+font-size: 16px;
 color: #787d86;
 border: none;
 background-color: #fff;
+outline: none;
 cursor: pointer;
-:focus {
-  outline: none;
-}
 `;
 
 const LanguagesDropdownContentWrapper = styled.ul`

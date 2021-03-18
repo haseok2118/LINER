@@ -6,6 +6,7 @@ import {
   ForYouSectionSubHeader,
   ForYouHeaderTitle,
 } from './ForYouElements';
+import Data from '../../Data';
 import ForYouContent from './ForYouContent';
 import RightSidebarSection from '../RightSidebarSection';
 import LanguagesDropdown from '../atoms/DropdownSection/LanguagesDropdown';
@@ -49,7 +50,7 @@ export const ForYouSection = () => {
           <ForYouHeaderTitle id="for-you-title">
             For You
             <div id="for-you-info">
-              <img src="info.svg" alt="" />
+              <img src="./images/info.svg" alt="" />
             </div>
           </ForYouHeaderTitle>
           <LanguagesDropdown />
@@ -58,6 +59,7 @@ export const ForYouSection = () => {
           Picked by LINER, just for you
         </ForYouSectionSubHeader>
         <ForYouContent
+          Data={Data}
           handleOpenShareModal={handleOpenShareModal}
           modalOpen={modalOpen}
           handleClickSaveButton={handleClickSaveButton}

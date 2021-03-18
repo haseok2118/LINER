@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import Header from './components/HeaderSection';
-import ModalSection from './components/atoms/ModalSection';
 import LeftSidebarSection from './components/LeftSidebarSection';
 import ForYouSection from './components/ForYouSection';
 import MyHighlightsSection from './components/MyHighlightsSection';
+import ForYouDetailSection from './components/ForYouDetailSection';
 
  const App = () => {
    return (
@@ -12,9 +12,9 @@ import MyHighlightsSection from './components/MyHighlightsSection';
       <Header />
       <LeftSidebarSection />
        {/* <ForYouSection /> */}
-       <MyHighlightsSection />
+       {/* <MyHighlightsSection /> */}
+       <ForYouDetailSection />
     </div>
-    // <ModalSection />
   )
 }
 

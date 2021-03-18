@@ -4,35 +4,41 @@ import {
   ModalContainer,
   ModalBox,
   ModalHeader,
+  ModalSubHeader,
   ModalContent,
   ModalFooter,
 } from './ModalElement'
 
-const ModalSection = ({handleCloseModal}) => {
+const ModalSection = ({
+  modalHeaderTitle,
+  modalSubHeader,
+  copyAddress,
+  handleCloseModal }) => {
 
   return (
     <ModalContainer>
       <ModalBox>
         <ModalHeaderWrapper>
           <ModalHeader>
-            <div>Share Original Page</div>
+            <div>{ modalHeaderTitle }</div>
             <span onClick={handleCloseModal}>
-              <img src="close-light.svg" alt="" ></img>
+              <img src="./images/close-light.svg" alt="" ></img>
             </span>
           </ModalHeader>
+          <ModalSubHeader>{ modalSubHeader }</ModalSubHeader>
         </ModalHeaderWrapper>
         <ModalContent>
           <div>
-            <a href="#"><img src="facebook.svg" alt="" /></a>
-            <a href="#"><img src="twitter.svg" alt="" /></a>
-            <a href="#"><img src="linkdin.svg" alt="" /></a>
-            <a href="#"><img src="messenger.svg" alt="" /></a>
-            <a href="#"><img src="line.svg" alt="" /></a>
-            <a href="#"><img src="mail.svg" alt="" /></a>
+            <a href="#"><img src="./images/facebook.svg" alt="" /></a>
+            <a href="#"><img src="./images/twitter.svg" alt="" /></a>
+            <a href="#"><img src="./images/linkdin.svg" alt="" /></a>
+            <a href="#"><img src="./images/messenger.svg" alt="" /></a>
+            <a href="#"><img src="./images/line.svg" alt="" /></a>
+            <a href="#"><img src="./images/mail.svg" alt="" /></a>
           </div>
         </ModalContent>
         <ModalFooter>
-          <div>https://www.getliner.com/foryou/posts/7GdseythMSDG65485asgcb659SDGB</div>
+          <div>{copyAddress}</div>
           <button>Copy</button>
         </ModalFooter>
       </ModalBox>

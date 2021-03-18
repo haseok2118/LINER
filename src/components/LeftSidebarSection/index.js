@@ -6,7 +6,7 @@ import {
 } from './LeftSidebarElements'
 
 
-export const LeftSidebarSection = () => {
+const LeftSidebarSection = () => {
   const handleTabClick = (e) => {
     let targetClass = e.target.className;
     let tabArray = document.getElementsByClassName(`${targetClass}`);

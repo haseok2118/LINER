@@ -39,8 +39,8 @@ const SearchOptionsDropdown = () => {
     <SearchOptionsDropdownContainer>
       <SearchOptionsDropdownButton onClick = {handleOpenSearchOptions}>
         Search Options
-        <ArrowForClosingFilter id="search-arrow-close" src="collapse.svg" alt="" />
-        <ArrowForOpeningFilter id="search-arrow-open" src="expand-grey.svg" alt="" />
+        <ArrowForClosingFilter id="search-arrow-close" src="./images/collapse.svg" alt="" />
+        <ArrowForOpeningFilter id="search-arrow-open" src="./images/expand-grey.svg" alt="" />
       </SearchOptionsDropdownButton>
       {searchOptionsOpen &&
         <SearchOptionsDropdownContentWrapper>
@@ -50,7 +50,7 @@ const SearchOptionsDropdown = () => {
             (
             <SearchOptionsDropdownContent key={item.id} id={item.title} onClick={handleCheckedSearchOptions} style={{color: `${options.active}` ? "#3DBDB8" : "rgb(82, 86, 92)"}}>
               {item.title}
-              <span style={{ display: `${options.active}` ? "block" : "none" }}><img src="check-primary.svg" alt="" /></span>
+              <span style={{ display: `${options.active}` ? "block" : "none" }}><img src="./images/check-primary.svg" alt="" /></span>
             </SearchOptionsDropdownContent>
             )
           )
@@ -75,17 +75,15 @@ height: 100%;
 display: flex;
 justify-content: flex-end;
 align-items: center;
-font-size: 15px;
+font-size: 16px;
 color: #787d86;
 border: none;
 background-color: #fff;
 cursor: pointer;
+outline: none;
 :hover {
   color: black;
   opacity: 0.7;
-:focus {
-  outline: none;
-}
 `;
 
 const SearchOptionsDropdownContentWrapper = styled.ul`

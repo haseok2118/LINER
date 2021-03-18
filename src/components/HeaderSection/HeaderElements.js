@@ -26,7 +26,7 @@ export const HeaderWrapper = styled.div`
 export const Logo = styled.a`
   width: 36px;
   height: 36px;
-  background-image: url("liner-logo.svg");
+  background-image: url("./images/liner-logo.svg");
   background-size: cover;
   border-radius: 8px;
   align-self: center;
@@ -47,9 +47,7 @@ export const Input = styled.input`
   border: none;
   border-radius: 8px;
   padding-left: 10px;
-  :focus {
-    outline:0;
-  }
+  outline: none;
   ::placeholder {
     color: #C6C9CB;
     font-weight: 500;
@@ -99,11 +97,12 @@ export const UploadButton = styled.button`
   border-radius: 8px;
   font-size: 15px;
   font-weight: 500;
+  outline: none;
+  cursor: pointer;  
   img {
     margin-right: 8px;
   }
   :hover {
-    cursor: pointer;
     background-color: #F5F8FA;
   }
 `;

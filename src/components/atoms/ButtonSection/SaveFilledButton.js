@@ -3,9 +3,7 @@ import styled from '@emotion/styled';
 
 const SaveFilledButton = ({handleClickSaveButton}) => {
   return (
-    <SaveFilledButtonContainer onClick={handleClickSaveButton}>
-      <img src="save-fill.svg" alt=""/>
-    </SaveFilledButtonContainer>
+    <SaveFilledButtonContainer onClick={handleClickSaveButton} />
   )
 }
 export default SaveFilledButton;
@@ -18,6 +16,8 @@ justify-content: center;
 width: 30px;
 height: 30px;
 border-radius: 50%;
+background-image: url("/images/save-fill.svg");
+background-size: cover;
 :hover {
   background-color: #EEF1F4;
   cursor: pointer;
